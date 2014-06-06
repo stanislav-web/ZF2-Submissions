@@ -66,3 +66,4 @@ In order to start using the module clone the repo in your vendor directory or ad
     git submodule add     git clone https://github.com/stanislav-web/ZF2-Submissions.git vendor/Submissions
 
 The module will also be available as a Composer package soon.
+Learn more and discuss can always in the group of ZendFramework 2 developers http://vk.com/zf2development
