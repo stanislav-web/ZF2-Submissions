@@ -1,10 +1,11 @@
-ZF2-Submissions Mass mailings Service
+ZF2-Submissions Mass mailings Service v 2
 ===============================================================
 This module is designed to organize mass mailings SMS and Email. The module serves as a container for multiple providers, organizing mass mailings Email and SMS. 
 ---------------------------------------------------------------
-Unisender Mass mailing service inside!
+Unisender | BulkSMS Mass mailing service inside!
 
 ![Alt text](http://www.unisender.com/images/logo.png "Unisender.com")
+![Alt text](https://bulksms.vsms.net/c/img/logo.jpg "Bulksms.vsms.net")
 
 ---------------------------------------------------------------
 Installation:
@@ -55,6 +56,12 @@ Then you have to create the same name used by the API methods and properties (ex
         // send created message
         $provider->sendMessage($message_id);
 
+		.....
+		// Using BulkSMS Gateway
+		$provider       = $factory->getProvider('BulkSMS');
+		
+		$provider->send(['msisdn' => 18909889780, 'message' => 'Test SMS']));
+		
         //... end more operations
 ?>
 ```

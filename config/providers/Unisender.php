@@ -6,13 +6,13 @@
 return [
     'Submissions\Provider\Config'  => [
         
-        // Unisender mass mail service
+        // Unisender mass mail Service
         
         'Unisender'  =>  [
 
             // Request params
             
-            'api_key'           =>  '0000000000000000000000000000000000000000', // API secret key
+            'api_key'           =>  'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq', // API secret key
             'lang'              =>  'ru',                                       // default language
             'api_url_pattern'   =>  'https://api.unisender.com/:lang/api/:uri', // pattern of basic request uri 
             'default_list'      =>  'SocialMobile',                             // using default mail list name

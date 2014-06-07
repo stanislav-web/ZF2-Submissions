@@ -27,10 +27,10 @@ interface ProviderInterface {
     public function getAdapterConfig();
     
     /**
-     * sendRequest() Send request to server
+     * sendRequest($uri = null, array $data = null) Send request to server
      * @param string $uri request URL
      * @param array $data request data
      * @access public
      */
-    public function sendRequest($uri, array $data = null);
+    public function sendRequest($uri = null, array $data = null);
 }

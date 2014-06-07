@@ -1,16 +1,13 @@
 {
-    "name": "stanislav-web/ZF2-Submissions",
-    "description": "ZF2-Submissions Mass mailings Service",
+    "name": "stanislav-web/ZF2-QIWI",
+    "description": "ZF2 QIWI v1.0",
     "type": "library",
     "keywords": [
         "zf2",
-        "unisender",
-        "zf2 submissions",
-        "zf2 mass mail"
-        "distributions"
-        "distributions mail"
+        "qiwi",
+        "qiwi payments"
     ],
-    "homepage": "https://github.com/stanislav-web/ZF2-Submissions",
+    "homepage": "https://github.com/stanislav-web/ZF2-QIWI",
     "authors": [
         {
             "name": "Stanislav WEB",
@@ -20,11 +17,11 @@
     ],
     "require": {
         "php": ">=5.4",
-        "zendframework/zendframework": ">=2.2.0"
+        "zendframework/zendframework": ">=2.0.0"
     },
     "autoload": {
         "psr-0": {
-            "Submissions": "src/"
+            "QIWI": "src/"
         },
         "classmap": [
             "./"
