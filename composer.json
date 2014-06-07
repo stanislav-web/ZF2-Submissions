@@ -1,13 +1,15 @@
 {
-    "name": "stanislav-web/ZF2-QIWI",
-    "description": "ZF2 QIWI v1.0",
+    "name": "stanislav-web/ZF2-Submissions",
+    "description": "ZF2 Submissions v2.0",
     "type": "library",
     "keywords": [
         "zf2",
-        "qiwi",
-        "qiwi payments"
+        "zf2 submissions",
+        "zf2 subscribers"
+        "unisender"
+        "bulksms"
     ],
-    "homepage": "https://github.com/stanislav-web/ZF2-QIWI",
+    "homepage": "https://github.com/stanislav-web/ZF2-Submissions",
     "authors": [
         {
             "name": "Stanislav WEB",
@@ -21,7 +23,7 @@
     },
     "autoload": {
         "psr-0": {
-            "QIWI": "src/"
+            "Submissions": "src/"
         },
         "classmap": [
             "./"
