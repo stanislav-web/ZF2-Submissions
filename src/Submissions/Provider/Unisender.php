@@ -278,7 +278,7 @@ class Unisender extends \ReflectionClass implements Aware\ProviderInterface {
     }     
     
     /**
-     * exportContacts($list_ids = null, $field_names = array('email'), $email_status = NULL, $phone_status = NULL) export data from subscribers UniSender. Different scenarios of using this method.
+     * exportContacts($list_ids = null, $field_names = array('email'), $email_status = null, $phone_status = null) export data from subscribers UniSender. Different scenarios of using this method.
      * @param string $list_ids id(s) of mailing lists ex. [112233,887789,6665576]
      * @param array $field_names exporting fields
      * @param string $email_status status email
@@ -287,7 +287,7 @@ class Unisender extends \ReflectionClass implements Aware\ProviderInterface {
      * @acces public
      * @return array
      */    
-    public function exportContacts($list_ids = null, $fields = array('email'), $email_status = NULL, $phone_status = NULL)
+    public function exportContacts($list_ids = null, $fields = array('email'), $email_status = null, $phone_status = null)
     {
         // Status of addresses. Possible field values ​​when exporting:
         
@@ -313,14 +313,11 @@ class Unisender extends \ReflectionClass implements Aware\ProviderInterface {
         // Check statuses and send request...
         
         if(is_array($list_ids)) $list_ids = implode(',', $list_ids);
-        
-	if($email_status !== NULL && !in_array($email_status, $statuses['email'])) throw new Exception\ExceptionStrategy($this->getShortName().' undefined status: '.$email_status);
-	if($phone_status !== NULL && !in_array($phone_status, $statuses['phone'])) throw new Exception\ExceptionStrategy($this->getShortName().' undefined status: '.$phone_status);
-        
+
         $parameters = ($list_ids != null) ? ['list_id' => $list_ids, 'field_names' => $fields] : ['field_names' => $fields];
 
-        if($email_status !== NULL) $parameters['email_status'] = $email_status;
-        if($phone_status !== NULL) $parameters['phone_status'] = $phone_status;
+        $parameters['email_status'] = (null != $email_status) ? $email_status : '';
+        $parameters['phone_status'] = (null != $phone_status) ? $phone_status : '';
         
         return $this->sendRequest('exportContacts', $parameters);
     }    
