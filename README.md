@@ -1,14 +1,17 @@
-ZF2-Submissions Mass mailings Service v 2
-===============================================================
-This module is designed to organize mass mailings SMS and Email. The module serves as a container for multiple providers, organizing mass mailings Email and SMS. 
----------------------------------------------------------------
-Unisender | BulkSMS Mass mailing service inside!
+### ZF2-Submissions Mass mailings Service v 2
+---------
+This module is designed to organize mass mailings SMS and Email. 
+The module serves as a container for multiple providers, organizing mass mailings Email and SMS. 
+=========
+
+#### Unisender | BulkSMS Mass mailing service inside!
 
 ![Alt text](http://www.unisender.com/images/logo.png "Unisender.com")
 ![Alt text](https://bulksms.vsms.net/c/img/logo.jpg "Bulksms.vsms.net")
 
 ---------------------------------------------------------------
-Installation:
+
+#### Installation:
 
 Require PHP 5.4+ extends SPL Library
 
@@ -27,6 +30,7 @@ Require PHP 5.4+ extends SPL Library
 Then you have to create the same name used by the API methods and properties (example API reside in the same directory ../src/Submissions/Provider/*.php ... Look there and do the same)
 
 3. How to use in the controller actions?
+
 ```php
 <?php  
 
@@ -66,6 +70,9 @@ Then you have to create the same name used by the API methods and properties (ex
 ?>
 ```
 --------------------------------------
+
+#### Notice
+
 In order to start using the module clone the repo in your vendor directory or add it as a submodule if you're already using git for your project:
 
     git clone https://github.com/stanislav-web/ZF2-Submissions.git vendor/Submissions
