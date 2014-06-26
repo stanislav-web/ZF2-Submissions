@@ -1,5 +1,7 @@
 ### ZF2-Submissions Mass mailings Service v 2
 ---------
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/stanislav-web/ZF2-Submissions/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/stanislav-web/ZF2-Submissions/?branch=master)
+---------
 This module is designed to organize mass mailings SMS and Email. 
 The module serves as a container for multiple providers, organizing mass mailings Email and SMS. 
 
