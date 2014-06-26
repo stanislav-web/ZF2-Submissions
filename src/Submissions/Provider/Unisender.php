@@ -315,9 +315,9 @@ class Unisender extends \ReflectionClass implements Aware\ProviderInterface {
         if(is_array($list_ids)) $list_ids = implode(',', $list_ids);
 
         $parameters = ($list_ids != null) ? ['list_id' => $list_ids, 'field_names' => $fields] : ['field_names' => $fields];
-
-        $parameters['email_status'] = (null != $email_status) ? $email_status : '';
-        $parameters['phone_status'] = (null != $phone_status) ? $phone_status : '';
+		
+        $parameters['email_status'] = (isset($statuses['email'][$email_status])) ? $email_status : null;
+        $parameters['phone_status'] = (isset($statuses['phone'][$phone_status])) ? $phone_status : null;
         
         return $this->sendRequest('exportContacts', $parameters);
     }    
